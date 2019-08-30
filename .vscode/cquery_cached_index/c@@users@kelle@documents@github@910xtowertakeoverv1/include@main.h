@@ -75,6 +75,14 @@ void opcontrol(void);
 /**
  * You can add C++-only headers here
  */
+ #include "subsystemHeaders/globals.hpp"
+ #include "subsystemHeaders/lift.hpp"
+ #include "subsystemHeaders/pid.hpp"
+ #include "subsystemHeaders/intake.hpp"
+ #include "subsystemHeaders/holder.hpp"
+ #include "subsystemHeaders/transmission.hpp"
+ #include "brainDisplay.h"
+
 //#include <iostream>
 #endif
 
