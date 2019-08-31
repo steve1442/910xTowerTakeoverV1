@@ -4,7 +4,7 @@ int driveTransmissionLeft;
 int driveTransmissionRight;
 int anglerTransmission;
 
-bool scoring;
+bool scoring = false;
 
 PidProfile * anglerPidStructP;
 
@@ -69,7 +69,7 @@ double avgEncoderUnits() {
 }
 
 double driveAngle(){
-	return (leftEncoder.get_value() - rightEncoder.get_value()/ENCODER_WIDTH) * PI;
+	return ((leftEncoder.get_value() - rightEncoder.get_value()/ENCODER_WIDTH) * 180)/ PI;
 }
 
 //AUTONOMOUS FUNCTIONS

@@ -13,7 +13,7 @@ void assignLift(){
     }
   }
   else if (controllerDigital(LIFT_DOWN_BUTTON)){
-    shifterPos-=0;
+    shifterPos-=1;
     while(controllerDigital(LIFT_UP_BUTTON)){
       pros::delay(1);
     }

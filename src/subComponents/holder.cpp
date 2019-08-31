@@ -21,7 +21,7 @@ void setHolderMode(int mode){
 
 void assignHolder(){
   if(controllerDigital(HOLDER_TOGGLE_BUTTON)){
-    holderStates = (holderStates == CLOSED || holderStates == CLOSING) ? CLOSING : OPENING;
+    holderStates = (holderStates == CLOSED || holderStates == CLOSING) ? OPENING : CLOSING;
     while(controllerDigital(HOLDER_TOGGLE_BUTTON)){
       pros::delay(1);
     }
@@ -30,7 +30,7 @@ void assignHolder(){
 
 void processHolder(){
   if(holderStates == CLOSED || holderStates == CLOSING){
-    if(holder.get_position() < previousHolderPosition + holderError || holder.get_position() > previousHolderPosition - holderError){
+    if(fabs(holder.get_position() - previousHolderPosition) < holderError){
       holderStates = CLOSED;
     }
     else{
@@ -38,7 +38,7 @@ void processHolder(){
     }
   }
   else if(holderStates == OPEN || holderStates == OPENING){
-    if(holder.get_position() < previousHolderPosition + holderError || holder.get_position() > previousHolderPosition - holderError){
+    if(fabs(holder.get_position() - previousHolderPosition) < holderError){
       holderStates = OPEN;
     }
     else{

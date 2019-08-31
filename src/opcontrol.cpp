@@ -28,14 +28,14 @@ void opcontrol() {
 			}
 		}
 		if(shift){
-			assignAngler();
+			assignLift();
 			assignHolder();
 		}
 		else{
-			assignDrive();
-			assignLift();
+			assignAngler();
+			assignIntake();
 		}
-		assignIntake();
+		assignDrive();
 		pros::delay(20);
 	}
 }

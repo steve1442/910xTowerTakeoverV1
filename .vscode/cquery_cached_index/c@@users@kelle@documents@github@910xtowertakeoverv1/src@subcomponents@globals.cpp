@@ -25,7 +25,10 @@ std::int32_t controllerAnalog(pros::controller_analog_e_t channel) {
 }
 
 void subsystemProcessingTask(void * ignore){
-  processTransmission();
-  processLift();
-  processHolder();
+  while(true){
+    processTransmission();
+    processLift();
+    processHolder();
+    pros::delay(20);
+  }
 }
