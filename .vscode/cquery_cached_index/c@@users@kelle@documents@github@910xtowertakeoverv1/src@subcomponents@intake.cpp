@@ -5,13 +5,13 @@ void setIntake(int pwm){
   rightIntake = pwm;
 }
 
-void IntakeOpcontrol(){
+void assignIntake(){
   if(controllerDigital(INTAKE_BUTTON)){
-    holderFunction(true);
+    setHolderMode(2);
     setIntake(127);
   }
-  else if(controllerDigital(INTAKE_BUTTON)){
-    holderFunction(false);
-    setIntake(127);
+  else if(controllerDigital(OUTTAKE_BUTTON)){
+    setHolderMode(2);
+    setIntake(-127);
   }
 }

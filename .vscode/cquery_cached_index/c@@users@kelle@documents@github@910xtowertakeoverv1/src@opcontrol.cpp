@@ -15,15 +15,27 @@
  */
 
 
-
+bool shift = false;
 
 void opcontrol() {
 	debugScreen();
 	while(true){
 		continuous();
-		setDrive((abs(controllerAnalog(LEFT_JOYSTICK)) < 10) ? 0 : controllerAnalog(LEFT_JOYSTICK)
-						,(abs(controllerAnalog(RIGHT_JOYSTICK)) < 10) ? 0 : controllerAnalog(RIGHT_JOYSTICK));
-		
+		if(controllerDigital(SHIFT_KEY)){
+			shift = !shift;
+			while(controllerDigital(SHIFT_KEY)){
+				pros::delay(1);
+			}
+		}
+		if(shift){
+			assignAngler();
+			assignHolder();
+		}
+		else{
+			assignDrive();
+			assignLift();
+		}
+		assignIntake();
 		pros::delay(20);
 	}
 }

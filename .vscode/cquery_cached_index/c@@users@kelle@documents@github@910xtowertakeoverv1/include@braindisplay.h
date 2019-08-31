@@ -7,3 +7,5 @@ extern const lv_img_t skylinelogo;
 
 extern const lv_img_t AutonSelect910;
 extern const lv_img_t skylineBrainTest;
+
+extern int auton;

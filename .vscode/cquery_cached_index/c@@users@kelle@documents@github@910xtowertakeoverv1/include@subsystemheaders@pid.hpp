@@ -1,6 +1,6 @@
 #include "main.h"
 
-struct Pid
+struct PidProfile
 {
     double errorTotal;
     double errorZone;
@@ -11,6 +11,6 @@ struct Pid
     double errorLast;
 };
 
-void changeConstants(Pid * pid, double kP, double kI, double kD);
+void changeConstants(PidProfile * pid, double kP, double kI, double kD);
 
-int PID(Pid * pid, double setPoint, double Sensor);
+int PID(PidProfile * pid, double setPoint, double Sensor);

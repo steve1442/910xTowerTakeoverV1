@@ -6,7 +6,7 @@ int anglerTransmission;
 
 bool scoring;
 
-Pid * anglerPidStructP;
+PidProfile * anglerPidStructP;
 
 int anglerPidPos;
 
@@ -32,19 +32,19 @@ void smartTransmission(){
 }
 
 void setDrive(int left, int right){
-  driveTransmissionLeft = (abs(left) > 127) ? 127 : left;
-  driveTransmissionRight = (abs(right) > 127) ? 127 : right;
+  driveTransmissionLeft = (abs(left) > 127) ? 127 * (left/abs(left)) : left;
+  driveTransmissionRight = (abs(right) > 127) ? 127 * (right/abs(right)) : right;
 }
 
 void setAngler(int pwm){
-  anglerTransmission = (abs(pwm) > 127) ? 127 : pwm;
+  anglerTransmission = (abs(pwm) > 127) ? 127 * (pwm/abs(pwm)) : pwm;
 }
 
 void anglerPid(){
   setAngler(PID(anglerPidStructP, anglerPidPos, anglerPot.get_value()));
 }
 
-void anglerOpcontrol(){
+void assignAngler(){
   if(controllerDigital(ANGLER_TOGGLE_BUTTON)){
     scoring = !scoring;
     while(controllerDigital(ANGLER_TOGGLE_BUTTON)){
@@ -52,4 +52,13 @@ void anglerOpcontrol(){
     }
   }
   anglerPidPos = (scoring) ? ANGLER_SCORING_POS : ANGLER_INTAKING_POS;
+}
+
+void assignDrive(){
+	setDrive((abs(controllerAnalog(LEFT_JOYSTICK)) < 10) ? 0 : controllerAnalog(LEFT_JOYSTICK)
+					,(abs(controllerAnalog(RIGHT_JOYSTICK)) < 10) ? 0 : controllerAnalog(RIGHT_JOYSTICK));
+}
+
+void processTransmission(){
+	anglerPid();
 }

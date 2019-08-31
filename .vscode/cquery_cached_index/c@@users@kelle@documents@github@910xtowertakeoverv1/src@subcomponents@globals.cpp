@@ -20,3 +20,9 @@ std::int32_t controllerDigital(pros::controller_digital_e_t channel) {
 std::int32_t controllerAnalog(pros::controller_analog_e_t channel) {
   return controller.get_analog(channel);
 }
+
+void subsystemProcessingTask(void * ignore){
+  processTransmission();
+  processLift();
+  processHolder();
+}

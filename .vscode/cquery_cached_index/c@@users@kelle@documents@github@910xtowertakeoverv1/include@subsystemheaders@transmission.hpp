@@ -5,3 +5,9 @@
 #define ANGLER_INTAKING_POS 2000
 
 void setDrive(int left, int right);
+
+void assignDrive();
+
+void assignAngler();
+
+void processTransmission();

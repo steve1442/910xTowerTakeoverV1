@@ -2,10 +2,10 @@
 
 int liftPidPos[] = {0,500,1000, 1500};
 int shifterPos;
-Pid * liftVariables;
+PidProfile * liftVariables;
 
 
-void shifter(){
+void assignLift(){
   if(controllerDigital(LIFT_UP_BUTTON)){
     shifterPos+=1;
     while(controllerDigital(LIFT_UP_BUTTON)){
@@ -23,7 +23,6 @@ void shifter(){
   }
 }
 
-void liftOpcontrol(){
-  shifter();
+void processLift(){
   lift = PID(liftVariables, liftPidPos[shifterPos], lift.get_position());
 }

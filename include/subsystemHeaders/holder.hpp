@@ -2,4 +2,8 @@
 
 #define HOLDER_POS 400
 
-void holderFunction(bool isOpen);
+void setHolderMode(int mode);
+
+void assignHolder();
+
+void processHolder();
