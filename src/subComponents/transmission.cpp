@@ -65,7 +65,11 @@ void tareDrive() {
 }
 
 double avgEncoderUnits() {
-  return (leftEncoder.get_value() + rightEncoder.get_value())/2;
+  return ((leftEncoder.get_value() + rightEncoder.get_value())/2);
+}
+
+double driveAngle(){
+	return (leftEncoder.get_value() - rightEncoder.get_value()/ENCODER_WIDTH) * PI;
 }
 
 //AUTONOMOUS FUNCTIONS

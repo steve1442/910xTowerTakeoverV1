@@ -41,3 +41,5 @@ extern pros::Motor holder;
 #define LEFT_BOTTOM_ENCODER_PORT 'C'
 #define RIGHT_TOP_ENCODER_PORT 'D'
 #define RIGHT_BOTTOM_ENCODER_PORT 'E'
+#define ENCODER_WIDTH 40
+#define PI 3.1415926
