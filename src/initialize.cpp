@@ -11,7 +11,7 @@
 void initialize() {
   pros::ADIGyro gyro(GYRO_PORT, 0.91);
   pros::Task subsystemProcessing(subsystemProcessingTask, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "subsystem processing task");
-  run();
+  //run();
 }
 
 /**

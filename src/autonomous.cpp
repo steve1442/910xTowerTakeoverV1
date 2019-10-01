@@ -33,7 +33,7 @@ void skills(){
 }
 
 void autonomous() {
-  switch(auton){
+  switch(1){
     case 0:
       blue1();
       break;

@@ -742,7 +742,7 @@ static const uint8_t skylinelogo_pixel_map[] = {
     };
 
 
-const lv_img_t skylinelogo = {
+const _lv_img_t skylinelogo = {
   .header.w = 411,			/*Image width in pixel count*/
   .header.h = 240,			/*Image height in pixel count*/
   .header.alpha_byte = 0,		/*No alpha byte*/

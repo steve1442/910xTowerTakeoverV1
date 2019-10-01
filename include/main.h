@@ -81,7 +81,7 @@ void opcontrol(void);
  #include "subsystemHeaders/intake.hpp"
  #include "subsystemHeaders/holder.hpp"
  #include "subsystemHeaders/transmission.hpp"
- #include "brainDisplay.h"
+
 
 //#include <iostream>
 #endif

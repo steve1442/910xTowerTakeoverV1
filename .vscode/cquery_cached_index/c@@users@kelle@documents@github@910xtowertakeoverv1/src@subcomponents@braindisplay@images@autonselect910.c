@@ -682,7 +682,7 @@ static const uint8_t AutonSelect910_pixel_map[] = {
     };
 
 
-const lv_img_t AutonSelect910 = {
+const _lv_img_t AutonSelect910 = {
   .header.w = 315,			/*Image width in pixel count*/
   .header.h = 220,			/*Image height in pixel count*/
   .header.alpha_byte = 1,		/*Alpha byte added to every pixel*/

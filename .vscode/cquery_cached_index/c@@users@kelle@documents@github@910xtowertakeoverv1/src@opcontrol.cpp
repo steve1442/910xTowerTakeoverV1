@@ -18,9 +18,9 @@
 bool shift = false;
 
 void opcontrol() {
-	debugScreen();
+//	debugScreen();
 	while(true){
-		continuous();
+		//continuous();
 		if(controllerDigital(SHIFT_KEY)){
 			shift = !shift;
 			while(controllerDigital(SHIFT_KEY)){
