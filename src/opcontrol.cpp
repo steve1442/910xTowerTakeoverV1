@@ -29,7 +29,6 @@ void opcontrol() {
 		}
 		if(shift){
 			assignLift();
-			assignHolder();
 		}
 		else{
 			assignAngler();

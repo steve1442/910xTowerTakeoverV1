@@ -30,10 +30,10 @@ extern pros::Motor transLeftDrive;
 extern pros::Motor transLeftAngler;
 extern pros::Motor transRightDrive;
 extern pros::Motor transRightAngler;
-extern pros::Motor lift;
+extern pros::Motor leftLift;
+extern pros::Motor rightLift;
 extern pros::Motor leftIntake;
 extern pros::Motor rightIntake;
-extern pros::Motor holder;
 
 #define GYRO_PORT 'F'
 #define ANGLER_POT_PORT 'A'

@@ -15,7 +15,7 @@
             "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
             "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
             "-iquote./include",
-            "-iquote./include/./",
+            "-iquote./include/subComponents/",
             "-mcpu=cortex-a9",
             "-mfpu=neon-fp16",
             "-mfloat-abi=softfp",
@@ -29,11 +29,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/autonomous.cpp.o",
-            "src\\autonomous.cpp"
+            "bin/subComponents/odometry.cpp.o",
+            "src\\subComponents\\odometry.cpp"
         ],
         "directory": "C:\\Users\\kelle\\Documents\\GitHub\\910xTowerTakeoverV1",
-        "file": "src\\autonomous.cpp"
+        "file": "src\\subComponents\\odometry.cpp"
     },
     {
         "arguments": [
@@ -123,7 +123,7 @@
             "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
             "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
             "-iquote./include",
-            "-iquote./include/subComponents/",
+            "-iquote./include/./",
             "-mcpu=cortex-a9",
             "-mfpu=neon-fp16",
             "-mfloat-abi=softfp",
@@ -137,11 +137,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/subComponents/lift.cpp.o",
-            "src\\subComponents\\lift.cpp"
+            "C:/Users/kelle/AppData/Local/Temp/tmpcvftxfhg/initialize.cpp.o",
+            "src\\initialize.cpp"
         ],
         "directory": "C:\\Users\\kelle\\Documents\\GitHub\\910xTowerTakeoverV1",
-        "file": "src\\subComponents\\lift.cpp"
+        "file": "src\\initialize.cpp"
     },
     {
         "arguments": [
@@ -173,11 +173,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/initialize.cpp.o",
-            "src\\initialize.cpp"
+            "C:/Users/kelle/AppData/Local/Temp/tmpg14nrlwo/autonomous.cpp.o",
+            "src\\autonomous.cpp"
         ],
         "directory": "C:\\Users\\kelle\\Documents\\GitHub\\910xTowerTakeoverV1",
-        "file": "src\\initialize.cpp"
+        "file": "src\\autonomous.cpp"
     },
     {
         "arguments": [
@@ -245,11 +245,11 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/subComponents/holder.cpp.o",
-            "src\\subComponents\\holder.cpp"
+            "bin/subComponents/globals.cpp.o",
+            "src\\subComponents\\globals.cpp"
         ],
         "directory": "C:\\Users\\kelle\\Documents\\GitHub\\910xTowerTakeoverV1",
-        "file": "src\\subComponents\\holder.cpp"
+        "file": "src\\subComponents\\globals.cpp"
     },
     {
         "arguments": [
@@ -317,46 +317,10 @@
             "-funwind-tables",
             "--std=gnu++17",
             "-o",
-            "bin/subComponents/globals.cpp.o",
-            "src\\subComponents\\globals.cpp"
+            "bin/subComponents/lift.cpp.o",
+            "src\\subComponents\\lift.cpp"
         ],
         "directory": "C:\\Users\\kelle\\Documents\\GitHub\\910xTowerTakeoverV1",
-        "file": "src\\subComponents\\globals.cpp"
-    },
-    {
-        "arguments": [
-            "clang++",
-            "-c",
-            "-target",
-            "armv7ar-none-none-eabi",
-            "-fno-ms-extensions",
-            "-fno-ms-compatibility",
-            "-fno-delayed-template-parsing",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/arm-none-eabi/thumb/v7-ar/fpv3/softfp",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include/c++/7.2.1/backward",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/include-fixed",
-            "-isystemc:\\program files\\pros\\toolchain\\usr\\bin\\../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/include",
-            "-iquote./include",
-            "-iquote./include/subComponents/",
-            "-mcpu=cortex-a9",
-            "-mfpu=neon-fp16",
-            "-mfloat-abi=softfp",
-            "-Os",
-            "-g",
-            "-D_POSIX_THREADS",
-            "-D_UNIX98_THREAD_MUTEX_ATTRIBUTES",
-            "-ffunction-sections",
-            "-fdata-sections",
-            "-fdiagnostics-color",
-            "-funwind-tables",
-            "--std=gnu++17",
-            "-o",
-            "bin/subComponents/odometry.cpp.o",
-            "src\\subComponents\\odometry.cpp"
-        ],
-        "directory": "C:\\Users\\kelle\\Documents\\GitHub\\910xTowerTakeoverV1",
-        "file": "src\\subComponents\\odometry.cpp"
+        "file": "src\\subComponents\\lift.cpp"
     }
 ]

@@ -4,6 +4,9 @@ int liftPidPos[] = {0,500,1000, 1500};
 int shifterPos;
 PidProfile * liftVariables;
 
+double averageLift(){
+  
+}
 
 void assignLift(){
   if(controllerDigital(LIFT_UP_BUTTON)){
@@ -24,5 +27,6 @@ void assignLift(){
 }
 
 void processLift(){
-  lift = PID(liftVariables, liftPidPos[shifterPos], lift.get_position());
+  leftLift = PID(liftVariables, liftPidPos[shifterPos], leftLift.get_position());
+  rightLift = PID(liftVariables, liftPidPos[shifterPos], leftLift.get_position());
 }

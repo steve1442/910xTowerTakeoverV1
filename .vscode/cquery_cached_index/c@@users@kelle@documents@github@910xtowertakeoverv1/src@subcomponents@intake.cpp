@@ -6,15 +6,13 @@ void setIntake(int pwm){
 }
 
 void assignIntake(){
-  if(controllerDigital(INTAKE_BUTTON)){
-    setHolderMode(3);
+  if(INTAKE_BUTTON)
     setIntake(127);
-  }
-  else if(controllerDigital(OUTTAKE_BUTTON)){
-    setHolderMode(3);
+  else if(OUTTAKE_BUTTON)
     setIntake(-127);
-  }
   else{
-    setHolderMode(2);
+    setIntake(0);
+    leftIntake.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
+    rightIntake.set_brake_mode(pros::E_MOTOR_BRAKE_HOLD);
   }
 }
