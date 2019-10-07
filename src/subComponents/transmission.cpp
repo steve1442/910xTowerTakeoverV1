@@ -3,12 +3,17 @@
 int driveTransmissionLeft;
 int driveTransmissionRight;
 int anglerTransmission;
+int anglerPositions[2] = {0,1000};
 
 bool scoring = false;
 
-PidProfile * anglerPidStructP;
+PidProfile anglerPidStructP;
 
-int anglerPidPos;
+void transmissionInit(){
+  anglerPidStructP.kP = 0.01;
+  anglerPidStructP.kI = 0.00;
+  anglerPidStructP.kD = 0.00;
+}
 
 void smartTransmission(){
 	int leftM1 = driveTransmissionLeft;
@@ -41,7 +46,7 @@ void setAngler(int pwm){
 }
 
 void anglerPid(){
-  setAngler(PID(anglerPidStructP, anglerPidPos, anglerPot.get_value()));
+  setAngler(PID(&anglerPidStructP, anglerPositions[scoring], anglerPot.get_value()));
 }
 
 void assignAngler(){
@@ -51,7 +56,6 @@ void assignAngler(){
       pros::delay(1);
     }
   }
-  anglerPidPos = (scoring) ? ANGLER_SCORING_POS : ANGLER_INTAKING_POS;
 }
 
 void assignDrive(){
@@ -162,4 +166,5 @@ void rotate(int degrees10, int maxSpeed) {
 void processTransmission(){
 	anglerPid();
 	smartTransmission();
+  pros::lcd::print(0, "angler potent: %d", anglerPot.get_value());
 }

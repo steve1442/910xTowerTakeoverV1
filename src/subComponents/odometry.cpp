@@ -1,8 +1,5 @@
 #include "main.h"
 
-pros::ADIEncoder encoder_left('A', 'B');
-pros::ADIEncoder encoder_right('G', 'H');
-pros::ADIEncoder encoder_side('C', 'D');
 
 double x = 0.0;
 double y = 0.0;
@@ -11,9 +8,9 @@ double tickToInchRatio = 3.25/360;
 double trackingWheelWidth = 4.0;
 double prev_a = a;
 double pi = 3.14159;
-double left = encoder_left.get_value() * tickToInchRatio;
-double right = encoder_right.get_value() * tickToInchRatio;
-double side = encoder_side.get_value() * tickToInchRatio;
+double left = leftEncoder.get_value() * tickToInchRatio;
+double right = rightEncoder.get_value() * tickToInchRatio;
+double side = sideEncoder.get_value() * tickToInchRatio;
 double delta_left = left;
 double delta_right = right;
 double delta_side = side;

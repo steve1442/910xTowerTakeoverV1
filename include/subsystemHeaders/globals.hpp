@@ -19,6 +19,7 @@ extern pros::ADIAnalogIn anglerPot;
 
 extern pros::ADIEncoder leftEncoder;
 extern pros::ADIEncoder rightEncoder;
+extern pros::ADIEncoder sideEncoder;
 
 void run();
 void debugScreen();
@@ -35,11 +36,13 @@ extern pros::Motor rightLift;
 extern pros::Motor leftIntake;
 extern pros::Motor rightIntake;
 
-#define GYRO_PORT 'F'
 #define ANGLER_POT_PORT 'A'
 #define LEFT_TOP_ENCODER_PORT 'B'
 #define LEFT_BOTTOM_ENCODER_PORT 'C'
 #define RIGHT_TOP_ENCODER_PORT 'D'
 #define RIGHT_BOTTOM_ENCODER_PORT 'E'
+#define HORIZONTAL_TOP_ENCODER_PORT 'F'
+#define HORIZONTAL_BOTTOM_ENCODER_PORT 'G'
+#define GYRO_PORT 'H'
 #define ENCODER_WIDTH 40
 #define PI 3.1415926

@@ -15,6 +15,7 @@ pros::ADIAnalogIn anglerPot(ANGLER_POT_PORT);
 
 pros::ADIEncoder leftEncoder (LEFT_TOP_ENCODER_PORT, LEFT_BOTTOM_ENCODER_PORT, false);
 pros::ADIEncoder rightEncoder (RIGHT_TOP_ENCODER_PORT, RIGHT_BOTTOM_ENCODER_PORT, true);
+pros::ADIEncoder sideEncoder (HORIZONTAL_TOP_ENCODER_PORT, HORIZONTAL_BOTTOM_ENCODER_PORT, true);
 
 std::int32_t controllerDigital(pros::controller_digital_e_t channel) {
   return controller.get_digital(channel);

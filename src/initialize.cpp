@@ -9,6 +9,7 @@
  * to keep execution time for this mode under a few seconds.
  */
 void initialize() {
+  pros::lcd::initialize();
   pros::ADIGyro gyro(GYRO_PORT, 0.91);
   pros::Task subsystemProcessing(subsystemProcessingTask, NULL, TASK_PRIORITY_DEFAULT, TASK_STACK_DEPTH_DEFAULT, "subsystem processing task");
   //run();
